@@ -1,4 +1,5 @@
 @page "/extras"
+@using System.Diagnostics.CodeAnalysis
 @using LucideBlazor
 @using ShadcnBlazor.Cards
 @using ShadcnBlazor.Badges
@@ -92,5 +93,5 @@
         new(false, "fileManager", "File Manager", typeof(FolderIcon))
     ];
 
-    record ComponentItem(bool InProgress, string Url, string Name, Type IconType);
+    record ComponentItem(bool InProgress, string Url, string Name, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] Type IconType);
 }

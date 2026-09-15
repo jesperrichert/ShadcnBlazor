@@ -1,4 +1,5 @@
 ﻿@page "/components"
+@using System.Diagnostics.CodeAnalysis
 @using LucideBlazor
 @using ShadcnBlazor.Cards
 @using ShadcnBlazor.Badges
@@ -134,5 +135,5 @@
         new(false, "tooltip", "Tooltip", typeof(ShapesIcon))
     ];
 
-    record ComponentItem(bool InProgress, string Url, string Name, Type IconType);
+    record ComponentItem(bool InProgress, string Url, string Name, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] Type IconType);
 }
